@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <setting pref="security.tls.version.min" pref-name="security.tls.version.min"
+           title="Minimum SSL Version" type="menulist">
+    <menulist>
+      <menupopup>
+        <menuitem label="SSLv3" value="0"/>
+        <menuitem label="TLS 1.0" value="1"/>
+        <menuitem label="TLS 1.1" value="2"/>
+        <menuitem label="TLS 1.2" value="3"/>
+      </menupopup>
+    </menulist>
+  </setting>
+</vbox>
