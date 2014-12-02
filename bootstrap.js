@@ -10,12 +10,12 @@ const prefService = Cc['@mozilla.org/preferences-service;1'].
 const prefName = 'security.tls.version.min';
 const defaultValue = 1; // TLS 1.0
 
-function install(data, reason) {}
-function uninstall(data, reason) {}
+function install() {}
+function uninstall() {}
 
-function startup(data, reasonCode) {
+function startup() {
   prefService.setIntPref(activePrefName, defaultValue);
 }
-function shutdown(data, reasonCode) {
+function shutdown() {
   prefService.clearUserPref(activePrefName);
 }
