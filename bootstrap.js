@@ -14,8 +14,8 @@ function install() {}
 function uninstall() {}
 
 function startup() {
-  prefService.setIntPref(activePrefName, defaultValue);
+  prefService.setIntPref(prefName, defaultValue);
 }
 function shutdown() {
-  prefService.clearUserPref(activePrefName);
+  prefService.clearUserPref(prefName);
 }
