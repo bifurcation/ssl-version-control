@@ -31,6 +31,7 @@ function copyPref(src, dst) {
 
 // Cache the old value of the pref and restore it
 function install(data, reason) {
+  dump("sslvc: install\n");
   copyPref(activePrefName, oldPrefName);
   prefService.setIntPref(activePrefName, defaultValue);
   copyPref(activePrefName, currentPrefName);
@@ -40,8 +41,11 @@ function install(data, reason) {
 function uninstall(data, reason) {}
 
 function startup(data, reasonCode) {
+  dump("sslvc: startup\n");
   copyPref(currentPrefName, activePrefName);
 }
 function shutdown(data, reasonCode) {
+  dump("sslvc: shutdown\n");
+  copyPref(activePrefName, currentPrefName);
   copyPref(oldPrefName, activePrefName);
 }
